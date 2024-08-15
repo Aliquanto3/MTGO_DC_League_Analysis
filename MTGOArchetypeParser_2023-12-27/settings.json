@@ -1,0 +1,15 @@
+{
+  "Format": "",
+  "ReferenceFormat": "",
+  "Meta": "",
+  "ConflictSolvingMode": "PreferSimpler",
+  "Filter": [
+  ],
+  "Exclude": [
+    
+  ],
+  "TournamentFolder": [
+    "MTGODecklistCache\\Tournaments"
+  ],
+  "FormatDataFolder": "MTGOFormatData\\Formats"
+}

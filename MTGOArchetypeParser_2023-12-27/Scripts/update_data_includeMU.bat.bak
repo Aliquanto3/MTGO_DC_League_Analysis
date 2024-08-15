@@ -1,0 +1,17 @@
+cd ..
+
+cd MTGODecklistCache
+git pull
+cd ..
+
+cd MTGOFormatData
+git pull
+cd ..
+
+MTGOArchetypeParser.App.exe json detect format=Legacy filter=Legacy includedecklists=true includematchups=true outputfile=Legacy_data.json
+
+MTGOArchetypeParser.App.exe json detect format=Pauper filter=Pauper includedecklists=true includematchups=true outputfile=Pauper_data.json 
+
+MTGOArchetypeParser.App.exe json detect format=Modern filter=Modern includedecklists=true includematchups=true outputfile=Modern_data.json
+
+MTGOArchetypeParser.App.exe json detect format=Pioneer filter=Pioneer includedecklists=true includematchups=true outputfile=Pioneer_data.json 
