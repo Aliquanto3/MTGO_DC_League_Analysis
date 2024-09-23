@@ -8,6 +8,8 @@ end = "2024-08-15"
 library("jsonlite")
 library("dplyr")
 library("ggplot2")
+library(gridExtra)
+library(grid)
 
 # Import DC League data
 rawData = jsonlite::fromJSON(TournamentResultFile)[[1]]
@@ -36,6 +38,7 @@ print(league_metagame)
 
 # Keep only the CZ with a presence above 1% to display in the graph
 league_metagame_filtered <- league_metagame %>% filter(Share > 1)
+grid.table(league_metagame_filtered)
 
 # Generate a title for the graph
 bar_chart_title = paste0("Share of the CZ among the 5-0 decks in MTGO Leagues", 
@@ -66,4 +69,3 @@ ggplot(league_metagame_filtered, aes(x = CZ, y = as.numeric(Share), fill = CZ)) 
         panel.background = element_blank(),
         text = element_text(size = 16),
         plot.title.position = "plot") 
-
